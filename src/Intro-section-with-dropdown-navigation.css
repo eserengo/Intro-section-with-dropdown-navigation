@@ -1,0 +1,269 @@
+:root {
+  /* --- FONTS --- */
+  font-family: "Epilogue";
+  font-size: 18px;
+  font-weight: 500;
+  --light: 300;
+  --bold: 700;
+  text-rendering: optimizeLegibility;
+
+  /* --- COLOR PALETTE --- */
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+  --blue: hsl(240, 100%, 50%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  user-select: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li,
+span {
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--medium-gray);
+}
+
+nav :where(i, li, div, span):hover {
+  cursor: pointer;
+  color: var(--almost-black);
+}
+
+.page {
+  min-width: 17rem;
+  display: grid;
+  grid-template: repeat(8, minmax(0, 12.5%)) / repeat(8, minmax(0, 12.5%));
+  padding-bottom: 2.5rem;
+}
+
+.header {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.image {
+  grid-column: 1 / -1;
+  grid-row: 2 / span 3;
+  margin: 1rem auto;
+}
+
+.text {
+  grid-column: 1 / -1;
+  grid-row: 5 / span 2;
+  padding: 2rem 0.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.text h1 {
+  font-weight: var(--bold);
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.text p {
+  color: var(--medium-gray);
+  margin: 1rem;
+  text-align: center;
+}
+
+.text button {
+  background-color: var(--almost-black);
+  color: var(--almost-white);
+  border: 1px solid var(--almost-black);
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: var(--bold);
+  text-align: center;
+  width: 6.5rem;
+  height: 2.5rem;
+}
+
+.text button:hover {
+  background-color: var(--almost-white);
+  color: var(--almost-black);
+  cursor: pointer;
+  box-shadow: 0 3px 3px var(--almost-black);
+}
+
+.tools {
+  grid-column: 1 / -1;
+  grid-row: 8;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+.tools img {
+  max-width: 20%;
+}
+
+.inactive {
+  display: none !important;
+}
+
+.active {
+  background-color: var(--almost-white);
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  padding: 3rem 0.5rem;
+ }
+
+.blur {
+  filter: blur(0.5rem) !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.left {
+  float: left !important;
+}
+
+.center {
+  text-align: center;
+}
+
+.abs {
+  position: absolute;
+  top: 2%;
+  right: 6%;
+}
+
+.col {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+}
+
+.pill {
+  border: 2px solid var(--medium-gray);
+  border-radius: 0.75rem;
+}
+
+.pill:hover {
+  border-color: var(--almost-black);
+}
+
+.logo {
+  margin-top: 5px;
+}
+
+.fa-times,
+.fa-navicon {
+  font-weight: var(--light);
+  font-size: 1.5rem;
+}
+
+.fa-chevron-down,
+.fa-chevron-up {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+}
+
+.feat-item,
+.co-item {
+  margin: 0;
+}
+
+.col span i {
+  margin-right: 0.5rem;
+}
+
+.feat-item:first-of-type,
+.co-item:first-of-type {
+  margin-top: 1rem;
+}
+
+.attribution {
+  font-size: 0.5rem;
+  text-align: center;
+}
+
+.attribution > a {
+  color: var(--blue);
+}
+
+@media screen and (width > 400px) {
+  .page {
+    min-width: 50rem;
+    display: grid;
+    grid-template: repeat(8, minmax(0, 12.5%)) / repeat(10, minmax(0, 10%));
+  }
+  .header {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .text {
+    grid-column: 2 / span 4;
+    grid-row: 3 / span 4;
+    align-items: flex-start;
+    padding: 0;
+    margin-top: 2rem;
+  }
+  .text h1 {
+    font-size: 3rem;
+    text-align: left;
+  }
+  .text p {
+    margin: 1rem 0;
+    text-align: left;
+  }
+  .text button {
+    margin: 0;
+  }
+  .tools {
+    grid-column: 2 / span 4;
+    grid-row: 7;
+    gap: 1rem;
+  }
+  .image {
+    grid-column: 7 / span 4;
+    grid-row: 2 / span 6;
+    padding: 0;
+    margin: 0;
+  }
+  .image img {
+    max-height: 100%;
+    margin-left: -2rem;
+  }
+  .navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+  }
+  .primary {
+    float: left;
+    margin-left: 2rem;
+  }
+  .secondary {
+    float: right;
+  }
+  .fa-chevron-down,
+  .fa-chevron-up {
+    position: absolute;
+    top: 0;
+    left: 4rem;
+  }
+}

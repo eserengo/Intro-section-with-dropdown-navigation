@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./src/Intro-section-with-dropdown-navigation.css" media="all">
+  <script src="./src/Intro-section-with-dropdown-navigation.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;500;700&display=swap">
+  <meta name="description" content="Author: Federico Borzani, Intro section with dropdown navigation">
+</head>
+
+<body>
+  <main class="page">
+    <header class="header">
+      <img class="logo container left" src="./src/images/logo.svg" alt="logo image" />
+      <nav class="modal">
+        <i class="fa fa-navicon right" id="menu"></i>
+        <i class="fa fa-times abs" id="close"></i>
+        <ul class="navbar primary">
+          <li>
+            <div class="col">Features
+              <i class="fa fa-chevron-down" id="feat-down"></i>
+              <i class="fa fa-chevron-up" id="feat-up"></i>
+                <span class="feat-item" id="target"><i class="fa fa-list"></i> Todo List</span>
+                <span class="feat-item"><i class="fa fa-calendar-o"></i> Calendar</span>
+                <span class="feat-item"><i class="fa fa-bell-o"></i> Reminders</span>
+                <span class="feat-item"><i class="fa fa-clock-o"></i> Planning</span>
+            </div>
+          </li>
+          <li>
+            <div class="col">Company
+              <i class="fa fa-chevron-down" id="co-down"></i>
+              <i class="fa fa-chevron-up" id="co-up"></i>
+                <span class="co-item"><i class="fa fa-university"></i> History</span>
+                <span class="co-item"><i class="fa fa-user-circle-o"></i> Our Team</span>
+                <span class="co-item"><i class="fa fa-pencil-square-o"></i> Blog</span>
+            </div>
+          </li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+        <ul class="navbar secondary center">
+          <li>Login</li>
+          <li class="pill">Register</li>
+        </ul>
+      </nav>
+    </header>
+    <section class="text container">
+      <h1>Make remote work</h1>
+      <p>Get your team in sync, no matter your location. Streamline processes,
+      create team rituals, and watch productivity soar.</p>
+      <button>Learn more</button>
+    </section>
+    <footer class="tools container">
+      <img src="./src/images/client-databiz.svg" alt="databiz image" />
+      <img src="./src/images/client-audiophile.svg" alt="audiophile image" />
+      <img src="./src/images/client-meet.svg" alt="meet image" />
+      <img src="./src/images/client-maker.svg" alt="maker image" />
+    </footer>
+    <picture class="image container">
+      <source media="(max-width: 400px)" srcset="./src/images/image-hero-mobile.png" />
+      <source media="(min-width: 401px)" srcset="./src/images/image-hero-desktop.png" />
+      <img src="./src/images/image-hero-mobile.png" alt="hero image />" 
+    </picture>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/eserengo/" target="_blank">Federico Borzani</a>.
+  </div>  
+</body>
+</html>
